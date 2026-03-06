@@ -12,11 +12,6 @@ from app.main import app
 
 TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 
-# Set required env vars before any app module is imported.
-# These are overridden per-test via dependency injection anyway.
-os.environ.setdefault("DATABASE_URL", "sqlite+aiosqlite:///:memory:")
-os.environ.setdefault("REDIS_URL", "redis://localhost:6379")
-
 
 @pytest_asyncio.fixture
 async def db_session():
