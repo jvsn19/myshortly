@@ -31,3 +31,6 @@ select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["app"]
+
+[tool.pytest.init_options]
+asyncio_mode = "auto"
